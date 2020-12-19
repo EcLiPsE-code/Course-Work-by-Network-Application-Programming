@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web client multiply chat</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div class="label">
+                <span>Count clients in multiplication chat:</span>
+            </div>
+            &nbsp;
+            <div id="countClient">
+                1203
+            </div>
+        </header>
+        <main>
+            <div class="show-msg">
+                <div class="message">
+                    <div class="label-msg">
+                        Petya
+                    </div>
+                    <div class="content-msg">
+                        Good bye!
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="label-msg">
+                        Petya
+                    </div>
+                    <div class="content-msg">
+                        Good bye!
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="label-msg">
+                        Petya
+                    </div>
+                    <div class="content-msg">
+                        Good bye!
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="label-msg">
+                        Petya
+                    </div>
+                    <div class="content-msg">
+                        Good bye!
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="label-msg">
+                        Petya
+                    </div>
+                    <div class="content-msg">
+                        Good bye!
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="label-msg">
+                        Petya
+                    </div>
+                    <div class="content-msg">
+                        Good bye!
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="label-msg">
+                        Petya
+                    </div>
+                    <div class="content-msg">
+                        Good bye!
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="label-msg">
+                        Petya
+                    </div>
+                    <div class="content-msg">
+                        Good bye!
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="label-msg">
+                        Petya
+                    </div>
+                    <div class="content-msg">
+                        Good bye!
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="label-msg">
+                        Petya
+                    </div>
+                    <div class="content-msg">
+                        Good bye!
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="label-msg">
+                        Petya
+                    </div>
+                    <div class="content-msg">
+                        Good bye!
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="label-msg">
+                        Petya
+                    </div>
+                    <div class="content-msg">
+                        Good bye!
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="label-msg">
+                        Petya
+                    </div>
+                    <div class="content-msg">
+                        Good bye!
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="label-msg">
+                        Petya
+                    </div>
+                    <div class="content-msg">
+                        Good bye!
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="label-msg">
+                        Petya
+                    </div>
+                    <div class="content-msg">
+                        Good bye!
+                    </div>
+                </div>
+            </div>
+            <div class="main-window m-window" style="display: flex">
+                <div class="btn-auth-window">
+                    <input type="button" id="btn-window-authorization" onclick="exposeBlock('.authorization', ['.main-window','.user-info','.registration'])" value="Authorization">
+                </div>
+                <div class="btn-register-window">
+                    <input type="button" id="btn-window-registration" onclick="exposeBlock('.registration', ['.main-window','.user-info','.authorization'])" value="Registration">
+                </div>
+            </div>
+            <div class="user-info" style="display: none">
+                <div class="user-label">
+                    <img src="../public/img/logo2.jpg" id="user-img">
+                </div>
+                <div class="label-nickname">
+                    <strong>NICKNAME</strong>
+                </div>
+                <div class="nickname">
+                    <i>ZaDrOt</i>
+                </div>
+                <div class="buttons">
+                    <div class="btn-check-your-msg" style="display:flex;">
+                        <input type="button" id="btn-check-your" value="Check message">
+                    </div>
+                    <div class="check-user-messages" style="display: none">
+                        <div class="btn-check-all-msg">
+                            <input type="button" id="btn-check-all" value="Check user">
+                        </div>
+                        <div class="select-user">
+                            <select name="users" id="usrs">
+                                <option value="usr1">User1</option>
+                                <option value="usr2">User2</option>
+                                <option value="usr3">User3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="btn-exit">
+                        <input type="button" id="btn-exit" onclick="exit()" value="Exit">
+                    </div>
+                </div>
+            </div>
+            <div class="registration" style="display: none">
+                <div class="registration-label">
+                    Registration
+                </div>
+                <div class="data">
+                    <div class="fullName">
+                        <div class="input-fullName">
+                            <input type="text" placeholder="Enter your fullName" id="input-fullName-r">
+                        </div>
+                    </div>
+                    <div class="email">
+                        <div class="input-email">
+                            <input type="email" placeholder="Enter your email" id="input-email-r">
+                        </div>
+                    </div>
+                    <div class="nickname">
+                        <div class="input-nickname">
+                            <input type="text" placeholder="Enter your nickname" id="input-ncknm-r">
+                        </div>
+                    </div>
+                    <div class="password">
+                        <div class="input-password">
+                            <input type="password" placeholder="Enter your password" id="input-pswrd-r">
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <div class="btn-auth" style="display: flex">
+                        <input type="button" id="btn-auth-r" onclick="registration()" value="Registration">
+                    </div>
+                    <div class="btn-back" style="display: flex">
+                        <input type="button" id="btn-back-r" onclick="exposeBlock('.main-window', ['.user-info','.authorization','.registration'])" value="Back">
+                    </div>
+                </div>
+            </div>
+            <div class="authorization" style="display: none">
+                <div class="authorization-label">
+                    Authorization
+                </div>
+                <div class="data">
+                    <div class="nickname">
+                        <div class="input-nickname">
+                            <input type="text" placeholder="Enter your nickname" id="input-ncknm">
+                        </div>
+                    </div>
+                    <div class="password">
+                        <div class="input-password">
+                            <input type="password" placeholder="Enter your password" id="input-pswrd">
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <div class="btn-auth" style="display: flex">
+                        <input type="button" id="btn-auth" onclick="authorization()" value="Authorization">
+                    </div>
+                    <div class="btn-back" style="display: flex">
+                        <input type="button" id="btn-back-a" onclick="exposeBlock('.main-window', ['.user-info','.authorization','.registration'])" value="Back">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="input-message">
+                <input type="text" id="message" placeholder="Enter message...">
+            </div>
+            <div class="send-message">
+                <input type="button" value="Send" id="send-msg" onclick="sendMessage()">
+            </div>
+        </footer>
+    </div>
+<script src="js/utils.js"></script>
+<script src="layout.js"></script>
+</body>
+</html>

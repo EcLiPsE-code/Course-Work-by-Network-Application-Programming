@@ -1,0 +1,22 @@
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #fff;
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
+    height: 10vh;
+    max-height: 10vh;
+    min-height: 10vh;
+    box-shadow: 0 0.1rem 0.1rem lightgray;
+    z-index: 1;
+    font-size: 2vw;
+}
+.label, #countClient{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: .4vw;
+}
