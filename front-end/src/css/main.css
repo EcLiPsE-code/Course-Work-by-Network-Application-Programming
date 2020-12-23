@@ -15,6 +15,7 @@ main{
     flex-wrap: wrap;
     width: 70vw;
     height: 80vh;
+    max-height: 80vh;
     overflow-y: auto;
 }
 .m-window{
@@ -30,27 +31,37 @@ main{
     max-width: 30vw;
     background-color: #fff;
 }
+.messages{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 .message{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 2vh 1vw;
+    height: 10vh;
     width: 70vw;
     max-width: 70vw;
+    margin-top: 1vh;
 }
-.label-msg{
-    padding: 3vh 2vw;
-}
-.content-msg{
+.user-name{
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    padding: 2vh 1vw;
-    border-radius: 3vw;
-    background-color: green;
-    color: #fff;
     justify-content: center;
-    font-size: 3vh;
+    align-items: center;
+    padding: 0 1vw 0 1vw;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: white;
+    border-radius: 4vh;
+    font-size: 1.7vw;
+    padding: 0 .6vw;
 }
 /*===============================*/
 /*

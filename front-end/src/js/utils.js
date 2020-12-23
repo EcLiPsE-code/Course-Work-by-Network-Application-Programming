@@ -1,3 +1,23 @@
+'use strict'
+
+/**
+ * Calc current date send messages
+ * @returns {string}
+ */
+function calcCurrentTime() {
+    const date = new Date()
+
+    const hours = date.getHours()
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+
+    return convertTime(hours, minutes, seconds)
+}
+
+function convertTime(hours, minutes, seconds) {
+    return `[${hours}:${minutes}:${seconds}]`
+}
+
 /**
  * Create content in the DOM-element
  * @type {{string: (function(*=): Text), function: (function(*=): HTMLElementTagNameMap[K]), object: (function(*): *)}}
@@ -7,31 +27,29 @@ const elementSelector = {
     'function' : child => document.createElement(child),
     'object' : child => child
 }
-
 /**
  *
  * @param message{string} user
  * @param nickname{string} user
  * @returns {object}
  */
-function createMessage(message, nickname) {
+export default function createMessage(message, nickname) {
     return node({
         type: 'div',
         classList: ['message'],
         children: [
             node({
                 type: 'div',
-                classList: ['label-msg'],
-                children: nickname
+                classList: ['user-name'],
+                children: nickname + calcCurrentTime()
             }),
             node({
                 type: 'div',
-                classList: ['content-msg'],
+                classList: ['content'],
                 children: message
             })
         ]
     })
-    //console.log(root_node)
 }
 /**
  * Return node DOM

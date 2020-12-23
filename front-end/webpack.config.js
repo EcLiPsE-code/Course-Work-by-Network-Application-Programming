@@ -1,21 +1,26 @@
-import path from 'path'
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import webpack from "webpack";
+const path = require("path")
+const HTMLWebpackPlugin = require("html-webpack-plugin")
+const {CleanWebpackPlugin} = require("clean-webpack-plugin")
 
 module.exports = {
-    entry: 'layout.js',
-    module: {
-        rules: [
-            {test: '/\.css$/', use: ['css-loader', 'style-loader']},
-            {test: '/\.js$/', use: 'babel-loader'},
-
-        ]
+    mode: "development",
+    entry: {
+        main: './src/index.js'
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: "index_bundle.js"
+        filename: "[name].[contenthash].js",
+        path: path.resolve(__dirname, 'dist')
     },
     plugins: [
-        new HtmlWebpackPlugin({template: './src/layout.html'}),
-    ]
+        new HTMLWebpackPlugin({
+            template: "./src/layout.html"
+        }),
+        new CleanWebpackPlugin()
+    ],
+    module: {
+        rules: [
+            {test: /\.css$/, use: ['style-loader','css-loader']},
+            {test: /\.(png|jpg|gif)$/, use: ['file-loader']}
+        ]
+    }
 }

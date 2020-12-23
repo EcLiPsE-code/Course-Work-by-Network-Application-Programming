@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Web client multiply chat</title>
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div class="page">
@@ -16,138 +12,21 @@
             </div>
             &nbsp;
             <div id="countClient">
-                1203
+                0
             </div>
         </header>
         <main>
             <div class="show-msg">
-                <div class="message">
-                    <div class="label-msg">
-                        Petya
-                    </div>
-                    <div class="content-msg">
-                        Good bye!
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="label-msg">
-                        Petya
-                    </div>
-                    <div class="content-msg">
-                        Good bye!
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="label-msg">
-                        Petya
-                    </div>
-                    <div class="content-msg">
-                        Good bye!
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="label-msg">
-                        Petya
-                    </div>
-                    <div class="content-msg">
-                        Good bye!
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="label-msg">
-                        Petya
-                    </div>
-                    <div class="content-msg">
-                        Good bye!
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="label-msg">
-                        Petya
-                    </div>
-                    <div class="content-msg">
-                        Good bye!
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="label-msg">
-                        Petya
-                    </div>
-                    <div class="content-msg">
-                        Good bye!
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="label-msg">
-                        Petya
-                    </div>
-                    <div class="content-msg">
-                        Good bye!
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="label-msg">
-                        Petya
-                    </div>
-                    <div class="content-msg">
-                        Good bye!
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="label-msg">
-                        Petya
-                    </div>
-                    <div class="content-msg">
-                        Good bye!
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="label-msg">
-                        Petya
-                    </div>
-                    <div class="content-msg">
-                        Good bye!
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="label-msg">
-                        Petya
-                    </div>
-                    <div class="content-msg">
-                        Good bye!
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="label-msg">
-                        Petya
-                    </div>
-                    <div class="content-msg">
-                        Good bye!
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="label-msg">
-                        Petya
-                    </div>
-                    <div class="content-msg">
-                        Good bye!
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="label-msg">
-                        Petya
-                    </div>
-                    <div class="content-msg">
-                        Good bye!
-                    </div>
+                <div class="messages">
+
                 </div>
             </div>
             <div class="main-window m-window" style="display: flex">
                 <div class="btn-auth-window">
-                    <input type="button" id="btn-window-authorization" onclick="exposeBlock('.authorization', ['.main-window','.user-info','.registration'])" value="Authorization">
+                    <input type="button" id="btn-window-authorization" value="Authorization">
                 </div>
                 <div class="btn-register-window">
-                    <input type="button" id="btn-window-registration" onclick="exposeBlock('.registration', ['.main-window','.user-info','.authorization'])" value="Registration">
+                    <input type="button" id="btn-window-registration" value="Registration">
                 </div>
             </div>
             <div class="user-info" style="display: none">
@@ -157,8 +36,8 @@
                 <div class="label-nickname">
                     <strong>NICKNAME</strong>
                 </div>
-                <div class="nickname">
-                    <i>ZaDrOt</i>
+                <div class="nickname" id="nick">
+
                 </div>
                 <div class="buttons">
                     <div class="btn-check-your-msg" style="display:flex;">
@@ -177,7 +56,7 @@
                         </div>
                     </div>
                     <div class="btn-exit">
-                        <input type="button" id="btn-exit" onclick="exit()" value="Exit">
+                        <input type="button" id="btn-exit" value="Exit">
                     </div>
                 </div>
             </div>
@@ -209,10 +88,10 @@
                 </div>
                 <div class="buttons">
                     <div class="btn-auth" style="display: flex">
-                        <input type="button" id="btn-auth-r" onclick="registration()" value="Registration">
+                        <input type="button" id="btn-auth-r" value="Registration">
                     </div>
                     <div class="btn-back" style="display: flex">
-                        <input type="button" id="btn-back-r" onclick="exposeBlock('.main-window', ['.user-info','.authorization','.registration'])" value="Back">
+                        <input type="button" id="btn-back-r" value="Back">
                     </div>
                 </div>
             </div>
@@ -234,10 +113,10 @@
                 </div>
                 <div class="buttons">
                     <div class="btn-auth" style="display: flex">
-                        <input type="button" id="btn-auth" onclick="authorization()" value="Authorization">
+                        <input type="button" id="btn-auth" value="Authorization">
                     </div>
                     <div class="btn-back" style="display: flex">
-                        <input type="button" id="btn-back-a" onclick="exposeBlock('.main-window', ['.user-info','.authorization','.registration'])" value="Back">
+                        <input type="button" id="btn-back-a" value="Back">
                     </div>
                 </div>
             </div>
@@ -247,11 +126,9 @@
                 <input type="text" id="message" placeholder="Enter message...">
             </div>
             <div class="send-message">
-                <input type="button" value="Send" id="send-msg" onclick="sendMessage()">
+                <input type="button" value="Send" id="send-msg" style="display: none">
             </div>
         </footer>
     </div>
-<script src="js/utils.js"></script>
-<script src="layout.js"></script>
 </body>
 </html>

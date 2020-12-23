@@ -7,13 +7,14 @@ create table Users
     FullName nvarchar(50) not null,
     Email nvarchar(20) unique not null,
     Nickname nvarchar(50) not null,
-    Password nvarchar(20) not null,
-    Role nvarchar(30) not null
+    Role nvarchar(30) not null,
+	Password nvarchar(20) not null
 );
-
+ 
 create table Messages
 (
 	Id int primary key auto_increment not null,
     Message nvarchar(100) not null,
-    Role nvarchar(30) not null
+    UserId int not null,
+    foreign key (UserId) references Users(Id)
 )
